@@ -6,5 +6,9 @@ class MainTheme {
       useMaterial3: true,
       primaryColor: ColorManager.primaryColor,
       iconTheme: const IconThemeData(color: Colors.white),
+      appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+          elevation: 0,
+          foregroundColor: Colors.white),
       fontFamily: "Cairo");
 }
