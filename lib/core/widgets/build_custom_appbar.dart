@@ -8,13 +8,10 @@ PreferredSizeWidget? buildCustomAppBar(
     required void Function()? onLeadingPressed}) {
   return AppBar(
     centerTitle: true,
-    title: Padding(
-      padding: EdgeInsets.only(top: 16.h),
-      child: Image.asset(
-        Assets.logoAppBar,
-        height: 60.h,
-        width: 60.w,
-      ),
+    title: Image.asset(
+      Assets.logoFullWord,
+      height: 44.h,
+      width: 93.w,
     ),
     leading: IconButton(
       onPressed: onLeadingPressed,

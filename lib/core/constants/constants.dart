@@ -34,6 +34,11 @@ class Constants {
       stops: [0, 1],
       begin: Alignment.centerLeft,
       end: Alignment.centerRight);
+  static const LinearGradient customItemsGradient = LinearGradient(
+      colors: ColorManager.customItemsBackgroundGradientColors,
+      stops: [0, 1],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter);
 
   static List<BottomNavBarItemModel> bottomNavBarItems = [
     BottomNavBarItemModel(title: AppTexts.tasks, icon: Assets.tasksIcon),

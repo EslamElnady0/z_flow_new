@@ -12,6 +12,7 @@ class Assets {
   static const String timeIcon = "assets/images/svgs/time.svg";
   static const String habitsIcon = "assets/images/svgs/habits.svg";
   static const String profileIcon = "assets/images/svgs/profile.svg";
+  static const String addIcon = "assets/images/svgs/add.svg";
 
   ///
 }
