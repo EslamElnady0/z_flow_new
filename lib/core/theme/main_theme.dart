@@ -5,5 +5,6 @@ class MainTheme {
   static final mainTheme = ThemeData(
       useMaterial3: true,
       primaryColor: ColorManager.primaryColor,
+      iconTheme: const IconThemeData(color: Colors.white),
       fontFamily: "Cairo");
 }

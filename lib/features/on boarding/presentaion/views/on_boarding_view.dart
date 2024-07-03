@@ -4,12 +4,12 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:z_flow/core/constants/colors.dart';
 import 'package:z_flow/core/styles/styles.dart';
 import 'package:z_flow/core/widgets/custom_scaffold.dart';
-import 'package:z_flow/core/widgets/inner_shadow.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_on_boarding_next_button.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_on_boarding_skip_button.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/on_boarding_item.dart';
 
 import '../../../../core/constants/constants.dart';
+import '../../../../core/routes/app_router.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -99,20 +99,17 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             SizedBox(
               height: 40.h,
             ),
-            InnerShadow(
-              shadows: [
-                BoxShadow(
-                    offset: const Offset(0, 4),
-                    blurRadius: 4,
-                    color: Colors.black.withOpacity(0.25))
-              ],
-              child: CustomOnBoardingNextButton(
-                  currentIndex: currentIndex, pageController: _pageController),
-            ),
+            CustomOnBoardingNextButton(
+                currentIndex: currentIndex, pageController: _pageController),
             SizedBox(
               height: 17.h,
             ),
-            const CustomOnBoardingSkipButton(),
+            CustomHollowButton(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, AppRouter.auth, (route) => false);
+              },
+            ),
             SizedBox(
               height: 20.h,
             )

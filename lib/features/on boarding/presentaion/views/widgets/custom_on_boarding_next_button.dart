@@ -18,6 +18,7 @@ class CustomOnBoardingNextButton extends StatelessWidget {
     return CustomButton(
       raduis: 16.r,
       text: currentIndex == 2 ? "Back" : "Next",
+      gradient: Constants.customButtonGradient,
       onTap: () {
         if (currentIndex < Constants.onBoardingScreens.length - 1) {
           _pageController.nextPage(

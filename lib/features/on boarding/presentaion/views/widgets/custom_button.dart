@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/colors.dart';
 import 'package:z_flow/core/styles/styles.dart';
+import 'package:z_flow/core/widgets/inner_shadow.dart';
 
 class CustomButton extends StatelessWidget {
   final void Function()? onTap;
@@ -12,6 +13,8 @@ class CustomButton extends StatelessWidget {
   final double? raduis;
   final List<BoxShadow>? boxShadow;
   final Border? border;
+  final EdgeInsetsGeometry? margin;
+  final LinearGradient? gradient;
   const CustomButton({
     super.key,
     this.onTap,
@@ -22,27 +25,39 @@ class CustomButton extends StatelessWidget {
     this.raduis,
     this.border,
     this.boxShadow,
+    this.margin,
+    this.gradient,
   });
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: double.infinity,
-        height: 55.h,
-        decoration: BoxDecoration(
-            color: color ?? ColorManager.primaryColor,
-            border: border,
-            boxShadow: boxShadow,
-            borderRadius: BorderRadius.circular(raduis ?? 8.r)),
-        child: child ??
-            Center(
-              child: Text(
-                text ?? "Next",
-                style: style ?? Styles.style20W700white,
+    return InnerShadow(
+      shadows: [
+        BoxShadow(
+            offset: const Offset(0, 4),
+            blurRadius: 4,
+            color: Colors.black.withOpacity(0.25))
+      ],
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          margin: margin,
+          height: 55.h,
+          decoration: BoxDecoration(
+              gradient: gradient,
+              color: color ?? ColorManager.primaryColor,
+              border: border,
+              boxShadow: boxShadow,
+              borderRadius: BorderRadius.circular(raduis ?? 8.r)),
+          child: child ??
+              Center(
+                child: Text(
+                  text ?? "Next",
+                  style: style ?? Styles.style20W700white,
+                ),
               ),
-            ),
+        ),
       ),
     );
   }

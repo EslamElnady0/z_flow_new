@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/assets.dart';
+import 'package:z_flow/core/constants/colors.dart';
 
 import '../../features/on boarding/data/on_boarding_model.dart';
 
@@ -24,4 +26,10 @@ class Constants {
         desc:
             "Join our private community where you can post, comment, and interact with others. Share your experiences, seek advice, and find solutions together in this inclusive space."),
   ];
+
+  static const LinearGradient customButtonGradient = LinearGradient(
+      colors: ColorManager.customButtonBackgroundGradientColors,
+      stops: [0, 1],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight);
 }

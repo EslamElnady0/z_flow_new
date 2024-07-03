@@ -55,7 +55,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
                   width: 80.w, // Set the desired width
                   height: 80.h, // Set the desired height
                   child: Image.asset(
-                    Assets.splashLogo,
+                    Assets.logo,
                     fit: BoxFit.contain,
                   ),
                 ),
