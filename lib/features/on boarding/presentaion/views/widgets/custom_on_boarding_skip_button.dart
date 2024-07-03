@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/colors.dart';
 
 import '../../../../../core/styles/styles.dart';
-import 'custom_button.dart';
+import '../../../../../core/widgets/custom_button.dart';
 
 class CustomHollowButton extends StatelessWidget {
   final String? text;

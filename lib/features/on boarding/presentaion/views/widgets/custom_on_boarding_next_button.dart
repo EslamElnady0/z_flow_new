@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/constants.dart';
-import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_button.dart';
+import 'package:z_flow/core/widgets/custom_button.dart';
 
 class CustomOnBoardingNextButton extends StatelessWidget {
   const CustomOnBoardingNextButton({
