@@ -5,7 +5,8 @@ import 'package:z_flow/core/constants/colors.dart';
 import 'package:z_flow/core/styles/styles.dart';
 import 'package:z_flow/core/widgets/custom_scaffold.dart';
 import 'package:z_flow/core/widgets/inner_shadow.dart';
-import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_button.dart';
+import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_on_boarding_next_button.dart';
+import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_on_boarding_skip_button.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/on_boarding_item.dart';
 
 import '../../../../core/constants/constants.dart';
@@ -105,41 +106,13 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     blurRadius: 4,
                     color: Colors.black.withOpacity(0.25))
               ],
-              child: CustomButton(
-                raduis: 16.r,
-                text: currentIndex == 2 ? "Back" : "Next",
-                onTap: () {
-                  if (currentIndex < Constants.onBoardingScreens.length - 1) {
-                    _pageController.nextPage(
-                      duration: const Duration(milliseconds: 350),
-                      curve: Curves.easeIn,
-                    );
-                  } else {
-                    _pageController.animateToPage(
-                      0,
-                      duration: const Duration(milliseconds: 350),
-                      curve: Curves.easeInOut,
-                    );
-                  }
-                },
-              ),
+              child: CustomOnBoardingNextButton(
+                  currentIndex: currentIndex, pageController: _pageController),
             ),
             SizedBox(
               height: 17.h,
             ),
-            CustomButton(
-              onTap: () {},
-              raduis: 16.r,
-              border: Border.all(color: ColorManager.primaryColor, width: 2),
-              color: Colors.transparent,
-              child: Center(
-                child: Text(
-                  "Skip",
-                  style: Styles.style20W700white
-                      .copyWith(color: ColorManager.primaryColor),
-                ),
-              ),
-            ),
+            const CustomOnBoardingSkipButton(),
             SizedBox(
               height: 20.h,
             )
