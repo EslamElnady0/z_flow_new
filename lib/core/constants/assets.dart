@@ -5,4 +5,13 @@ class Assets {
   static const String firstOnBoarding = "assets/images/firstOnBoarding.png";
   static const String secondOnBoarding = "assets/images/secondOnBoarding.png";
   static const String thirdOnBoarding = "assets/images/thirdOnBoarding.png";
+
+  ////////////////        svgs              ///////////////////////
+  static const String tasksIcon = "assets/images/svgs/tasks.svg";
+  static const String calenderIcon = "assets/images/svgs/calender.svg";
+  static const String timeIcon = "assets/images/svgs/time.svg";
+  static const String habitsIcon = "assets/images/svgs/habits.svg";
+  static const String profileIcon = "assets/images/svgs/profile.svg";
+
+  ///
 }

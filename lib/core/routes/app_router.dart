@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:z_flow/features/home/presentation/ui%20cubits/cubit/bottom_nav_bar_cubit.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/on_boarding_view.dart';
 
 import '../../features/auth/presentation/views/auth_view.dart';
@@ -26,7 +28,11 @@ class AppRouter {
       // case signUp:
       //   return MaterialPageRoute(builder: (context) => const AuthView());
       case home:
-        return MaterialPageRoute(builder: (context) => const HomeView());
+        return MaterialPageRoute(
+            builder: (context) => BlocProvider(
+                  create: (context) => BottomNavBarCubit(),
+                  child: const HomeView(),
+                ));
       default:
         return MaterialPageRoute(builder: (context) => const Text("7moksha"));
     }
