@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:z_flow/features/home/presentation/ui%20cubits/cubit/bottom_nav_bar_cubit.dart';
 import 'package:z_flow/features/home/presentation/views/widgets/calender_body.dart';
+import 'package:z_flow/features/home/presentation/views/widgets/habits_body.dart';
 import 'package:z_flow/features/home/presentation/views/widgets/time_management_body.dart';
 import 'tasks_body.dart';
 
@@ -20,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
           case 2:
             return const TimeManagementBody();
           case 3:
-            return const Text("4");
+            return const HabitsBody();
           case 4:
             return const Text("5");
           default:

@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../../core/constants/app_texts.dart';
 import '../../../../../core/constants/assets.dart';
 import '../../../../../core/constants/constants.dart';
 import '../../../../../core/styles/styles.dart';
 
 class CustomAddButton extends StatelessWidget {
-  const CustomAddButton({super.key});
+  final void Function()? onTap;
+  final String text;
+  const CustomAddButton({super.key, this.onTap, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class CustomAddButton extends StatelessWidget {
               width: 24.w,
             ),
             Text(
-              AppTexts.addNewTask,
+              text,
               style: Styles.style24W600,
             )
           ],

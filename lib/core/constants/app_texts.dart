@@ -19,4 +19,7 @@ class AppTexts {
   static const String toSetUsageLimitsForEach = "To set usage limits for each!";
   static const String timeOfUse = "Time of use";
   static const String limitationsOfUse = "Limitations of use";
+  static const String habitsToAccomplishToday = "Habits to accomplish today!";
+  static const String habitsYouCompletedToday = "Habits you completed today!";
+  static const String addNewHabit = "Add a new habit !";
 }
