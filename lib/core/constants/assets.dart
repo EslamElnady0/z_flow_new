@@ -10,6 +10,7 @@ class Assets {
   static const String twentyForSevenBot = "assets/images/twentyForSevenBot.png";
   static const String continuedUse = "assets/images/continuedUse.png";
   static const String twentyFourSeven = "assets/images/twentyFourSeven.png";
+  static const String defaultProfile = "assets/images/defaultProfileImage.png";
 
   ////////////////        svgs              ///////////////////////
   static const String tasksIcon = "assets/images/svgs/tasks.svg";
@@ -18,6 +19,7 @@ class Assets {
   static const String habitsIcon = "assets/images/svgs/habits.svg";
   static const String profileIcon = "assets/images/svgs/profile.svg";
   static const String addIcon = "assets/images/svgs/add.svg";
+  static const String googleLogo = "assets/images/svgs/google_logo.svg";
 
   ///
 }

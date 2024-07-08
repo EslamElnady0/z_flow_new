@@ -22,4 +22,8 @@ class AppTexts {
   static const String habitsToAccomplishToday = "Habits to accomplish today!";
   static const String habitsYouCompletedToday = "Habits you completed today!";
   static const String addNewHabit = "Add a new habit !";
+  static const String welcome = "Welcome ";
+  static const String user = "User! ";
+  static const String toZFlow = "to ZFlow";
+  static const String continueWithGoogle = "Continue with google";
 }

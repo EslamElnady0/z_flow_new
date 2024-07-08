@@ -29,6 +29,9 @@ class TimeManagementBody extends StatelessWidget {
             height: 20.h,
           ),
           const ImageSwitcher(),
+          SizedBox(
+            height: 20.h,
+          ),
           CustomButton(
             text: AppTexts.timeOfUse,
             gradient: Constants.customButtonGradient,

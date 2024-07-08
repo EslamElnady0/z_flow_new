@@ -12,6 +12,7 @@ class CustomButton extends StatelessWidget {
   final TextStyle? style;
   final double? raduis;
   final double? height;
+  final AlignmentGeometry? alignment;
   final List<BoxShadow>? boxShadow;
   final Border? border;
   final EdgeInsetsGeometry? margin;
@@ -29,6 +30,7 @@ class CustomButton extends StatelessWidget {
     this.margin,
     this.gradient,
     this.height,
+    this.alignment,
   });
 
   @override
@@ -46,6 +48,7 @@ class CustomButton extends StatelessWidget {
           width: double.infinity,
           margin: margin,
           height: height ?? 55.h,
+          alignment: alignment,
           decoration: BoxDecoration(
               gradient: gradient,
               color: color ?? ColorManager.primaryColor,
