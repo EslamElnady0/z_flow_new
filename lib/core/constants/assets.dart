@@ -1,4 +1,5 @@
 class Assets {
+  ///////////////         images          ///////////////////////
   static const String logo = "assets/images/ZF.png";
   static const String logoAppBar = "assets/images/ZF_AppBar.png";
   static const String logoFullWord = "assets/images/ZFlow.png";
@@ -6,6 +7,9 @@ class Assets {
   static const String secondOnBoarding = "assets/images/secondOnBoarding.png";
   static const String thirdOnBoarding = "assets/images/thirdOnBoarding.png";
   static const String calenderImage = "assets/images/calender_image.png";
+  static const String twentyForSevenBot = "assets/images/twentyForSevenBot.png";
+  static const String continuedUse = "assets/images/continuedUse.png";
+  static const String twentyFourSeven = "assets/images/twentyFourSeven.png";
 
   ////////////////        svgs              ///////////////////////
   static const String tasksIcon = "assets/images/svgs/tasks.svg";

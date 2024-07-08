@@ -12,4 +12,11 @@ class AppTexts {
   static const String gregorianCalendar = "Gregorian calendar!";
   static const String yourTasksForThatDay = "Your tasks for that day";
   static const String addNewTask = "Add a new task !";
+  static const String hereYouCanFindOutYourTime =
+      "Here you can find out your time!";
+  static const String twentyFourHoursADay7Days = "24 hours a day, 7 days!";
+  static const String yourContinuedUse = "Your continued use.";
+  static const String toSetUsageLimitsForEach = "To set usage limits for each!";
+  static const String timeOfUse = "Time of use";
+  static const String limitationsOfUse = "Limitations of use";
 }
