@@ -9,5 +9,7 @@ class AppTexts {
   static const String habits = "Habits";
   static const String profile = "Profile";
   static const String onGoingTasks = "Ongoing Tasks";
+  static const String gregorianCalendar = "Gregorian calendar!";
+  static const String yourTasksForThatDay = "Your tasks for that day";
   static const String addNewTask = "Add a new task !";
 }

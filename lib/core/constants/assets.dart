@@ -5,6 +5,7 @@ class Assets {
   static const String firstOnBoarding = "assets/images/firstOnBoarding.png";
   static const String secondOnBoarding = "assets/images/secondOnBoarding.png";
   static const String thirdOnBoarding = "assets/images/thirdOnBoarding.png";
+  static const String calenderImage = "assets/images/calender_image.png";
 
   ////////////////        svgs              ///////////////////////
   static const String tasksIcon = "assets/images/svgs/tasks.svg";

@@ -47,4 +47,7 @@ class Constants {
     BottomNavBarItemModel(title: AppTexts.habits, icon: Assets.habitsIcon),
     BottomNavBarItemModel(title: AppTexts.profile, icon: Assets.profileIcon),
   ];
+
+  static BoxShadow shadow =
+      const BoxShadow(offset: Offset(0, 4), blurRadius: 4);
 }

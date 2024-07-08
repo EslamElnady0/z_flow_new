@@ -25,4 +25,8 @@ class Styles {
             color: Colors.white.withOpacity(0.25))
       ],
       color: ColorManager.primaryColor);
+  static TextStyle style10w600 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w600,
+  );
 }
