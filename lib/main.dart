@@ -24,7 +24,7 @@ class ZFlowApp extends StatelessWidget {
         theme: MainTheme.mainTheme,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: AppRouter.forgotPassword,
+        initialRoute: AppRouter.home,
       ),
     );
   }

@@ -28,6 +28,7 @@ class AuthViewBody extends StatelessWidget {
         CustomHollowButton(
           margin: EdgeInsets.symmetric(horizontal: 18.w),
           text: AppTexts.logIn,
+          style: Styles.style20W700white,
           onTap: () {
             Navigator.of(context).pushNamed(AppRouter.logIn);
           },

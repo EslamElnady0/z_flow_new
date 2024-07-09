@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:z_flow/core/constants/constants.dart';
 import 'package:z_flow/core/widgets/inner_shadow.dart';
 import 'package:z_flow/features/home/presentation/ui%20cubits/cubit/bottom_nav_bar_cubit.dart';
-
 import '../../../../../core/constants/colors.dart';
 import 'selected_bottom_nav_bar_item.dart';
+import 'unselected_bottom_nav_bar_item.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});
@@ -40,6 +39,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       .entries
                       .map((bottomNavModelEntry) {
                     return GestureDetector(
+                      behavior: HitTestBehavior.translucent,
                       onTap: () {
                         context
                             .read<BottomNavBarCubit>()
@@ -50,8 +50,9 @@ class CustomBottomNavBar extends StatelessWidget {
                           ? SelectedBottomNavBarItem(
                               bottomNavModelEntry: bottomNavModelEntry,
                             )
-                          : SvgPicture.asset(bottomNavModelEntry.value.icon,
-                              color: Colors.white, height: 24.h, width: 24.w),
+                          : UnSelectedBottomNavBarItem(
+                              bottomNavModelEntry: bottomNavModelEntry,
+                            ),
                     );
                   })
                 ]),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/assets.dart';
 import 'package:z_flow/core/styles/styles.dart';
@@ -15,10 +16,13 @@ class AuthScreensHeader extends StatelessWidget {
         SizedBox(
           height: 30.h,
         ),
-        Image.asset(
-          Assets.logoFullWord,
-          height: 107.h,
-          width: 196.w,
+        Hero(
+          tag: "logo",
+          child: Image.asset(
+            Assets.logoFullWord,
+            height: 107.h,
+            width: 196.w,
+          ),
         ),
         SizedBox(
           height: 20.h,

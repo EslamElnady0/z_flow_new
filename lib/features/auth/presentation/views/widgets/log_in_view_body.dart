@@ -79,10 +79,7 @@ class LogInViewBody extends StatelessWidget {
                     height: 20.h,
                   ),
                   const Spacer(),
-                  const CustomAuthFooter(
-                    backExists: true,
-                    skipExists: true,
-                  ),
+                  const CustomAuthFooter(),
                   SizedBox(
                     height: 20.h,
                   )

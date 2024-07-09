@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/app_texts.dart';
 import 'package:z_flow/core/constants/assets.dart';
@@ -23,10 +24,13 @@ class ForgotPasswordViewBody extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-                Image.asset(
-                  Assets.logoFullWord,
-                  height: 64.h,
-                  width: 103.w,
+                Hero(
+                  tag: "logo",
+                  child: Image.asset(
+                    Assets.logoFullWord,
+                    height: 64.h,
+                    width: 103.w,
+                  ),
                 ),
                 SizedBox(
                   height: 18.h,

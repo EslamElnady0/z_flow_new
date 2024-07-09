@@ -7,6 +7,7 @@ import '../../../../../core/widgets/custom_button.dart';
 
 class CustomHollowButton extends StatelessWidget {
   final String? text;
+  final TextStyle? style;
   final void Function()? onTap;
   final EdgeInsetsGeometry? margin;
   const CustomHollowButton({
@@ -14,6 +15,7 @@ class CustomHollowButton extends StatelessWidget {
     this.text,
     this.onTap,
     this.margin,
+    this.style,
   });
 
   @override
@@ -27,8 +29,9 @@ class CustomHollowButton extends StatelessWidget {
       child: Center(
         child: Text(
           text ?? "Skip",
-          style: Styles.style20W700white
-              .copyWith(color: ColorManager.primaryColor),
+          style: style ??
+              Styles.style20W700white
+                  .copyWith(color: ColorManager.primaryColor),
         ),
       ),
     );
