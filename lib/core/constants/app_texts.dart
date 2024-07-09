@@ -26,4 +26,10 @@ class AppTexts {
   static const String user = "User! ";
   static const String toZFlow = "to ZFlow";
   static const String continueWithGoogle = "Continue with google";
+  static const String youCanTrackYourProgress =
+      "You can track your progress here!";
+  static const String completedTasks = "Completed tasks";
+  static const String pendingTasks = "Pending tasks";
+  static const String completedHabits = "Completed habits";
+  static const String pendingHabits = "Pending habits";
 }

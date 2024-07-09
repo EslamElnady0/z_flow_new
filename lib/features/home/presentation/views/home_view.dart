@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:z_flow/core/widgets/build_custom_appbar.dart';
 import 'package:z_flow/core/widgets/custom_scaffold.dart';
-import 'package:z_flow/features/home/presentation/views/widgets/profile_body.dart';
 import 'widgets/custom_bottom_nav_bar.dart';
 import 'widgets/home_view_body.dart';
 
@@ -17,7 +16,7 @@ class HomeView extends StatelessWidget {
         onLeadingPressed: () {},
       ),
       extendBody: true,
-      body: const ProfileBody(),
+      body: const HomeViewBody(),
       bottomNavigationBar: const CustomBottomNavBar(),
     );
   }

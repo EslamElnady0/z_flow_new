@@ -11,5 +11,6 @@ class MainTheme {
           backgroundColor: Colors.black,
           elevation: 0,
           foregroundColor: Colors.white),
+      dividerTheme: const DividerThemeData(color: Colors.grey),
       fontFamily: "Cairo");
 }

@@ -8,6 +8,11 @@ class Styles {
     fontWeight: FontWeight.w600,
     color: Colors.grey,
   );
+  static TextStyle style16W500grey = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.grey,
+  );
   static TextStyle style24W600 = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.w600,
