@@ -3,13 +3,19 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/routes/app_router.dart';
 import 'package:z_flow/core/theme/main_theme.dart';
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-main() {
+main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const ZFlowApp());
 }
 
