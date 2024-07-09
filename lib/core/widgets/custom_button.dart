@@ -13,10 +13,11 @@ class CustomButton extends StatelessWidget {
   final double? raduis;
   final double? height;
   final AlignmentGeometry? alignment;
-  final List<BoxShadow>? boxShadow;
+  final List<BoxShadow>? dropShadow;
   final Border? border;
   final EdgeInsetsGeometry? margin;
   final LinearGradient? gradient;
+  final List<BoxShadow>? innerShadow;
   const CustomButton({
     super.key,
     this.onTap,
@@ -26,22 +27,24 @@ class CustomButton extends StatelessWidget {
     this.style,
     this.raduis,
     this.border,
-    this.boxShadow,
+    this.dropShadow,
     this.margin,
     this.gradient,
     this.height,
     this.alignment,
+    this.innerShadow,
   });
 
   @override
   Widget build(BuildContext context) {
     return InnerShadow(
-      shadows: [
-        BoxShadow(
-            offset: const Offset(0, 4),
-            blurRadius: 4,
-            color: Colors.black.withOpacity(0.25))
-      ],
+      shadows: innerShadow ??
+          [
+            BoxShadow(
+                offset: const Offset(0, 4),
+                blurRadius: 4,
+                color: Colors.black.withOpacity(0.25))
+          ],
       child: GestureDetector(
         onTap: onTap,
         child: Container(
@@ -53,7 +56,7 @@ class CustomButton extends StatelessWidget {
               gradient: gradient,
               color: color ?? ColorManager.primaryColor,
               border: border,
-              boxShadow: boxShadow,
+              boxShadow: dropShadow,
               borderRadius: BorderRadius.circular(raduis ?? 8.r)),
           child: child ??
               Center(

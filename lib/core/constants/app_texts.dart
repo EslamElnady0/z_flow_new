@@ -32,4 +32,5 @@ class AppTexts {
   static const String pendingTasks = "Pending tasks";
   static const String completedHabits = "Completed habits";
   static const String pendingHabits = "Pending habits";
+  static const String youCanContinueWith = "You can continue with";
 }
