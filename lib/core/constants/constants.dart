@@ -50,4 +50,8 @@ class Constants {
 
   static BoxShadow shadow =
       const BoxShadow(offset: Offset(0, 4), blurRadius: 4);
+
+  static OutlineInputBorder textFieldBorder = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12.r),
+      borderSide: const BorderSide(color: Colors.white, width: 1.5));
 }

@@ -5,32 +5,62 @@ import 'package:z_flow/core/routes/app_router.dart';
 import '../../../../../core/constants/app_texts.dart';
 import '../../../../../core/styles/styles.dart';
 
-class CustomFooterSkipButton extends StatelessWidget {
-  const CustomFooterSkipButton({
+class CustomAuthFooter extends StatelessWidget {
+  final bool backExists;
+  const CustomAuthFooter({
     super.key,
+    required this.backExists,
   });
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, AppRouter.home);
-      },
-      child: Row(
-        children: [
-          const Spacer(),
-          Text(
-            AppTexts.skip,
-            style: Styles.style16W600grey.copyWith(
-              color: Colors.white,
-            ),
+    return Row(
+      children: [
+        backExists
+            ? GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.arrow_back_ios,
+                      size: 22.r,
+                    ),
+                    Text(
+                      AppTexts.back,
+                      style: Styles.style16W600grey.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            : const SizedBox(),
+        const Spacer(),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed(AppRouter.home);
+          },
+          child: Row(
+            children: [
+              Text(
+                AppTexts.skip,
+                style: Styles.style16W600grey.copyWith(
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                width: 3.w,
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                size: 22.r,
+              ),
+            ],
           ),
-          Icon(
-            Icons.double_arrow_rounded,
-            size: 22.r,
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 }

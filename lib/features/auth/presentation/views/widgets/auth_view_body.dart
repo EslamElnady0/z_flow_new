@@ -7,6 +7,7 @@ import 'package:z_flow/features/auth/presentation/views/widgets/custom_footer_sk
 import 'package:z_flow/core/widgets/custom_button.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_on_boarding_skip_button.dart';
 
+import '../../../../../core/routes/app_router.dart';
 import 'auth_screens_header.dart';
 import 'custom_google_auth_button.dart';
 
@@ -17,14 +18,19 @@ class AuthViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const AuthScreensHeader(),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18.w),
+          child: const AuthScreensHeader(),
+        ),
         SizedBox(
           height: 40.h,
         ),
         CustomHollowButton(
           margin: EdgeInsets.symmetric(horizontal: 18.w),
           text: AppTexts.logIn,
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).pushNamed(AppRouter.logIn);
+          },
         ),
         SizedBox(
           height: 18.h,
@@ -34,7 +40,9 @@ class AuthViewBody extends StatelessWidget {
           text: AppTexts.signUp,
           margin: EdgeInsets.symmetric(horizontal: 18.w),
           raduis: 16.r,
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).pushNamed(AppRouter.signUp);
+          },
         ),
         SizedBox(
           height: 40.h,
@@ -69,8 +77,10 @@ class AuthViewBody extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: Padding(
-            padding: EdgeInsets.only(bottom: 24.h, right: 24.w),
-            child: const CustomFooterSkipButton(),
+            padding: EdgeInsets.only(bottom: 24.h, right: 18.w),
+            child: const CustomAuthFooter(
+              backExists: false,
+            ),
           ),
         )
       ],

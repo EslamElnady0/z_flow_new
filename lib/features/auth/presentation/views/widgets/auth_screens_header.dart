@@ -31,10 +31,8 @@ class AuthScreensHeader extends StatelessWidget {
         SizedBox(
           height: 43.h,
         ),
-        Divider(
+        const Divider(
           color: Colors.white,
-          endIndent: 15.w,
-          indent: 15.w,
         ),
       ],
     );

@@ -3,6 +3,7 @@ class AppTexts {
   static const String logIn = "Log In";
   static const String signUp = "Sign Up";
   static const String skip = "Skip";
+  static const String back = "Back";
   static const String tasks = "Tasks";
   static const String calender = "Calender";
   static const String time = "Time";
@@ -33,4 +34,10 @@ class AppTexts {
   static const String completedHabits = "Completed habits";
   static const String pendingHabits = "Pending habits";
   static const String youCanContinueWith = "You can continue with";
+  static const String email = "Email";
+  static const String password = "Password";
+  static const String firstName = "FirstName";
+  static const String lastName = "LastName";
+  static const String confirmPassword = "Confirm Password";
+  static const String formPassword = "Forgot your password?";
 }
