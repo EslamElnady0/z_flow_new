@@ -39,5 +39,5 @@ class AppTexts {
   static const String firstName = "FirstName";
   static const String lastName = "LastName";
   static const String confirmPassword = "Confirm Password";
-  static const String formPassword = "Forgot your password?";
+  static const String forgotPassword = "Forgot your password?";
 }

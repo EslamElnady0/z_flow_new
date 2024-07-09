@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/app_texts.dart';
 import 'package:z_flow/core/styles/styles.dart';
@@ -36,7 +35,7 @@ class LogInViewBody extends StatelessWidget {
                 ),
                 CustomAuthTextField(
                     hintText: AppTexts.password,
-                    icon: Icons.lock,
+                    icon: Icons.lock_outline,
                     controller: TextEditingController()),
                 SizedBox(
                   height: 12.h,
@@ -44,7 +43,7 @@ class LogInViewBody extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 10.w),
                   child: Text(
-                    AppTexts.formPassword,
+                    AppTexts.forgotPassword,
                     style: Styles.style12w600,
                   ),
                 ),

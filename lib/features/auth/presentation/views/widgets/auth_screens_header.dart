@@ -13,7 +13,7 @@ class AuthScreensHeader extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 40.h,
+          height: 30.h,
         ),
         Image.asset(
           Assets.logoFullWord,
@@ -21,7 +21,7 @@ class AuthScreensHeader extends StatelessWidget {
           width: 196.w,
         ),
         SizedBox(
-          height: 30.h,
+          height: 20.h,
         ),
         Text(
           "Reset your password if you've forgotten it. We'll help you regain access to your account.",
@@ -29,7 +29,7 @@ class AuthScreensHeader extends StatelessWidget {
           style: Styles.style14w400,
         ),
         SizedBox(
-          height: 43.h,
+          height: 30.h,
         ),
         const Divider(
           color: Colors.white,
