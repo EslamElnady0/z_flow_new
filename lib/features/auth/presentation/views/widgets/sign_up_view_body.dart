@@ -7,7 +7,7 @@ import 'package:z_flow/core/widgets/custom_button.dart';
 import 'package:z_flow/features/auth/presentation/views/widgets/custom_auth_textfield.dart';
 
 import 'auth_screens_header.dart';
-import 'custom_footer_skip_button.dart';
+import 'custom_auth_footer.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});

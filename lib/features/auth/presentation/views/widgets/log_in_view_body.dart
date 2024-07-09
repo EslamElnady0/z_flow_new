@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/app_texts.dart';
 import 'package:z_flow/core/styles/styles.dart';
 import 'package:z_flow/core/widgets/custom_button.dart';
 import 'package:z_flow/features/auth/presentation/views/widgets/auth_screens_header.dart';
 import 'package:z_flow/features/auth/presentation/views/widgets/custom_auth_textfield.dart';
-import 'package:z_flow/features/auth/presentation/views/widgets/custom_footer_skip_button.dart';
+import 'package:z_flow/features/auth/presentation/views/widgets/custom_auth_footer.dart';
 
 import '../../../../../core/constants/constants.dart';
+import '../../../../../core/routes/app_router.dart';
 
 class LogInViewBody extends StatelessWidget {
   const LogInViewBody({super.key});
@@ -40,11 +42,16 @@ class LogInViewBody extends StatelessWidget {
                 SizedBox(
                   height: 12.h,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 10.w),
-                  child: Text(
-                    AppTexts.forgotPassword,
-                    style: Styles.style12w600,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(AppRouter.forgotPassword);
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10.w),
+                    child: Text(
+                      AppTexts.forgotPassword,
+                      style: Styles.style12w600,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -74,6 +81,7 @@ class LogInViewBody extends StatelessWidget {
                   const Spacer(),
                   const CustomAuthFooter(
                     backExists: true,
+                    skipExists: true,
                   ),
                   SizedBox(
                     height: 20.h,

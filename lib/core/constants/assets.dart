@@ -11,6 +11,8 @@ class Assets {
   static const String continuedUse = "assets/images/continuedUse.png";
   static const String twentyFourSeven = "assets/images/twentyFourSeven.png";
   static const String defaultProfile = "assets/images/defaultProfileImage.png";
+  static const String forgettingPerson = "assets/images/forgettingPerson.png";
+  static const String passwordImage = "assets/images/passwordImage.png";
 
   ////////////////        svgs              ///////////////////////
   static const String tasksIcon = "assets/images/svgs/tasks.svg";

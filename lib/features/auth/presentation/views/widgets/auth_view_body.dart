@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/app_texts.dart';
 import 'package:z_flow/core/constants/constants.dart';
 import 'package:z_flow/core/styles/styles.dart';
-import 'package:z_flow/features/auth/presentation/views/widgets/custom_footer_skip_button.dart';
+import 'package:z_flow/features/auth/presentation/views/widgets/custom_auth_footer.dart';
 import 'package:z_flow/core/widgets/custom_button.dart';
 import 'package:z_flow/features/on%20boarding/presentaion/views/widgets/custom_on_boarding_skip_button.dart';
 

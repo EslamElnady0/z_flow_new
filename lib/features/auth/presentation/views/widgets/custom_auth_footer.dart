@@ -7,9 +7,11 @@ import '../../../../../core/styles/styles.dart';
 
 class CustomAuthFooter extends StatelessWidget {
   final bool backExists;
+  final bool skipExists;
   const CustomAuthFooter({
     super.key,
-    required this.backExists,
+    this.backExists = true,
+    this.skipExists = true,
   });
 
   @override
@@ -38,28 +40,30 @@ class CustomAuthFooter extends StatelessWidget {
               )
             : const SizedBox(),
         const Spacer(),
-        GestureDetector(
-          onTap: () {
-            Navigator.of(context).pushNamed(AppRouter.home);
-          },
-          child: Row(
-            children: [
-              Text(
-                AppTexts.skip,
-                style: Styles.style16W600grey.copyWith(
-                  color: Colors.white,
+        skipExists
+            ? GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(AppRouter.home);
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      AppTexts.skip,
+                      style: Styles.style16W600grey.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 3.w,
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 22.r,
+                    ),
+                  ],
                 ),
-              ),
-              SizedBox(
-                width: 3.w,
-              ),
-              Icon(
-                Icons.arrow_forward_ios,
-                size: 22.r,
-              ),
-            ],
-          ),
-        )
+              )
+            : const SizedBox()
       ],
     );
   }
