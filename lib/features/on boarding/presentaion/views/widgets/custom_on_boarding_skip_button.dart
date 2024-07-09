@@ -8,6 +8,7 @@ import '../../../../../core/widgets/custom_button.dart';
 class CustomHollowButton extends StatelessWidget {
   final String? text;
   final TextStyle? style;
+  final double? height;
   final void Function()? onTap;
   final EdgeInsetsGeometry? margin;
   const CustomHollowButton({
@@ -16,12 +17,14 @@ class CustomHollowButton extends StatelessWidget {
     this.onTap,
     this.margin,
     this.style,
+    this.height,
   });
 
   @override
   Widget build(BuildContext context) {
     return CustomButton(
       margin: margin,
+      height: height,
       onTap: onTap,
       raduis: 16.r,
       border: Border.all(color: ColorManager.primaryColor, width: 2),

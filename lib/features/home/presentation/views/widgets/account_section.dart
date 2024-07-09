@@ -3,10 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:z_flow/core/constants/app_texts.dart';
 import 'package:z_flow/core/constants/assets.dart';
 import 'package:z_flow/core/constants/colors.dart';
-import 'package:z_flow/core/constants/constants.dart';
-import 'package:z_flow/core/widgets/custom_button.dart';
-
 import '../../../../../core/styles/styles.dart';
+import 'blinking_profile_auth_button.dart';
 import 'profile_google_sign_in_button.dart';
 
 class AccountSection extends StatelessWidget {
@@ -44,22 +42,16 @@ class AccountSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 47.w),
           child: Row(children: [
-            Expanded(
-                child: CustomButton(
-              gradient: Constants.customButtonGradient,
-              height: 45.h,
+            const Expanded(
+                child: BlinkingProfileAuthButton(
               text: AppTexts.signUp,
-              raduis: 14.r,
             )),
             SizedBox(
               width: 8.w,
             ),
-            Expanded(
-                child: CustomButton(
-              height: 45.h,
-              gradient: Constants.customButtonGradient,
+            const Expanded(
+                child: BlinkingProfileAuthButton(
               text: AppTexts.logIn,
-              raduis: 14.r,
             )),
           ]),
         ),
